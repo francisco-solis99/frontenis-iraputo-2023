@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    font-family: 'Archivo Narrow', 'system-ui';
+  }
+}
+
+
+@font-face {
+  font-family: 'Archivo Narrow';
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/Archivo.woff2') format('woff2'),
+  url('/fonts/Archivo.woff') format('woff'),
+  url('/fonts/Archivo.ttf') format(truetype);
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  font-display: swap;
+  font-weight: 400;
+  src: url('/fonts/Audiowide.woff2') format('woff2'),
+  url('/fonts/Audiowide.woff') format('woff'),
+  url('/fonts/Audiowide.ttf') format(truetype);
+}
