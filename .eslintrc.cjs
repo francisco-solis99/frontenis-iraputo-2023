@@ -1,8 +1,16 @@
 module.exports = {
   extends: [
+    'eslint:recommended',
     'standard',
     'plugin:astro/recommended'
   ],
+
+  rules: {
+    'no-tabs': 'off',
+    // indent: 'off',
+    'space-before-function-paren': 'off',
+    semi: ['error', 'always']
+  },
   // ...
   overrides: [
     {
@@ -18,13 +26,9 @@ module.exports = {
       },
       rules: {
         // override/add rules settings here, such as:
-        // "astro/no-set-html-directive": "error"
-        'no-tabs': 'off',
-        // indent: 'off',
-        'space-before-function-paren': 'off',
-        semi: ['error', 'always']
+        'astro/no-set-html-directive': 'error'
       }
     }
     // ...
   ]
-}
+};
