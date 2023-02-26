@@ -20,7 +20,7 @@ module.exports = {
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
         'no-tabs': 'off',
-        indent: 'off',
+        // indent: 'off',
         'space-before-function-paren': 'off',
         semi: ['error', 'always']
       }
