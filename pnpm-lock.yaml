@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/tailwind': ^3.0.1
   '@typescript-eslint/parser': ^5.53.0
+  add-to-calendar-button: ^2.1.4
   astro: 2.0.14
   eslint: ^8.34.0
   eslint-plugin-astro: ^0.23.0
@@ -11,6 +12,7 @@ specifiers:
 
 dependencies:
   '@astrojs/tailwind': 3.0.1_hf2kjfio2dr6w52rh4mpociq2u
+  add-to-calendar-button: 2.1.4
   astro: 2.0.14
   tailwindcss: 3.2.7
 
@@ -872,6 +874,13 @@ packages:
     resolution: {integrity: sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  /add-to-calendar-button/2.1.4:
+    resolution: {integrity: sha512-4e2mAqPuWF3z5qXHs/TCPXazTEFw6P3xaDBgJDRFCs1IuSNTGMW0JZ9gm7NL3lfm69hUZBQB6p7iuyVwSuePSg==}
+    engines: {node: '>=16.18.1', npm: '>=8.19.2'}
+    dependencies:
+      timezones-ical-library: 1.6.1
+    dev: false
 
   /ajv/6.12.6:
     resolution: {integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==}
@@ -4119,6 +4128,11 @@ packages:
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
+
+  /timezones-ical-library/1.6.1:
+    resolution: {integrity: sha512-KlYe1VeyaXlcfXM5rDqUJ8Xv1C80P3ek9A50r3MaOsFpt3YCoymPkAR2SB/wNYOk7hJjl0MoUrJC8B+IaDUtNg==}
+    engines: {node: '>=14.20.0'}
+    dev: false
 
   /tiny-glob/0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
