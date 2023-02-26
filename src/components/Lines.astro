@@ -3,20 +3,20 @@ const NUM_LINES = 11;
 const lines = [...Array(NUM_LINES).keys()];
 ---
 
-<div class="absolute right-0 top-[15%] grid gap-y-6">
+<div class="absolute right-0 top-[15%] hidden lg:grid gap-y-6">
     {
       lines.map(line => {
-          const isbigger = line + 1 === 4 || line + 1 === 7;
-          const widthLine = isbigger ? 'w-20' : 'w-10';
+        const isbigger = line + 1 === 4 || line + 1 === 7;
+        const longLine = isbigger ? '20' : '10';
 
-          return (
+        return (
               <div class="flex items-center justify-end">
                   <span class="inline-flex items-center justify-center w-9 h-9 font-audiowide text-lg text-tournment-yellow-200 border-4 border-tournment-yellow-200 rounded-full">
                     {line + 1}
                   </span>
-                  <span class={`inline-block ${widthLine} h-1 bg-tournment-yellow-200`}></span>
+                  <span class={`inline-block w-${longLine} h-1 bg-tournment-yellow-200`}></span>
               </div>
-          );
+        );
       })
     }
 </div>
