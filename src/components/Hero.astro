@@ -1,5 +1,7 @@
 ---
 import LocationIcon from '@components/icons/Location.astro';
+import AddToCalendar from './AddToCalendar.astro';
+
 ---
 <main class="mt-14 pb-44 px-4 text-center">
     <picture class="inline-block max-w-[280px] mx-auto">
@@ -14,18 +16,20 @@ import LocationIcon from '@components/icons/Location.astro';
             Torneo Frontenis Irapuato
         </h1>
         <div class="mt-5 flex justify-center font-bold space-x-12">
-            <p class="flex flex-col cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-tournment-yellow-100 to-tournment-yellow-200 hover:contrast-200 hover:scale-125 transition">
-                <span class="text-4xl lg:text-5xl">26</span>
-                <span class="text-3xl lg:ext-4xl">Marzo</span>
-                <span class="text-2xl lg:text-3xl">8:00 am</span>
-            </p>
-            <p class="flex flex-col cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-tournment-yellow-100 to-tournment-yellow-200 hover:scale-125 transition">
+            <AddToCalendar>
+                <p class="flex flex-col cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-tournment-yellow-100 to-tournment-yellow-200 hover:contrast-200 hover:scale-125 transition">
+                    <span class="text-4xl lg:text-5xl">26</span>
+                    <span class="text-3xl lg:ext-4xl">Marzo</span>
+                    <span class="text-2xl lg:text-3xl">8:00 am</span>
+                </p>
+            </AddToCalendar>
+            <a href="https://goo.gl/maps/h4dHpEXteS4dGpA97" target="_blank" rel="nofollow" class="flex flex-col cursor-pointer text-transparent bg-clip-text bg-gradient-to-r from-tournment-yellow-100 to-tournment-yellow-200 hover:scale-125 transition">
                 <span>
                     <LocationIcon />
                 </span>
                 <span class="text-3xl lg:text-4xl">Deportiva</span>
                 <span class="text-2xl lg:text-3xl">Norte</span>
-            </p>
+            </a>
         </div>
     </div>
 </main>
