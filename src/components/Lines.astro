@@ -6,15 +6,14 @@ const lines = [...Array(NUM_LINES).keys()];
 <div class="absolute right-0 top-[15%] hidden lg:grid gap-y-6">
     {
       lines.map(line => {
-        const isbigger = line + 1 === 4 || line + 1 === 7;
-        const longLine = isbigger ? '20' : '10';
+        const isBigger = line + 1 === 4 || line + 1 === 7;
 
         return (
               <div class="flex items-center justify-end">
                   <span class="inline-flex items-center justify-center w-9 h-9 font-audiowide text-lg text-tournment-yellow-200 border-4 border-tournment-yellow-200 rounded-full">
                     {line + 1}
                   </span>
-                  <span class={`inline-block w-${longLine} h-1 bg-tournment-yellow-200`}></span>
+                  <span class:list={['inline-block h-1 bg-tournment-yellow-200', { 'w-20': isBigger, 'w-10': !isBigger }]}></span>
               </div>
         );
       })
