@@ -1,0 +1,38 @@
+---
+const sponsors = [
+  {
+    name: 'comudaj',
+    link: 'https://www.irapuato.gob.mx/comudaj/',
+    image: 'comudaj.webp'
+  },
+  {
+    name: 'Cryspuraice',
+    link: 'https://cryspuraice.com.mx/',
+    image: 'cryspuraice.webp'
+  },
+  {
+    name: 'Dimatec',
+    link: 'https://dimatec.mx/',
+    image: 'dimatec.webp'
+  },
+  {
+    name: 'Lulu Burger',
+    link: 'https://www.facebook.com/Lulu-Burger-658755967979587/',
+    image: 'lulu.webp'
+  }
+];
+---
+
+<ul class="grid grid-cols-3 justify-items-center items-center gap-8">
+  {
+    sponsors.map(sponsor => {
+      return (
+        <li>
+          <a href={sponsor.link} target="_blank" rel="noopener noreferrer" title={sponsor.name} class="inline-block w-40 h-auto transition hover:saturate-200 hover:scale-125">
+              <img src={`/images/logos/${sponsor.image}`} alt={sponsor.name} class="" loading='lazy'>
+          </a>
+        </li>
+      );
+    })
+  }
+</ul>
