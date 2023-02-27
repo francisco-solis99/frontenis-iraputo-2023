@@ -7,6 +7,7 @@ import GreenBackground from '@components/GreenBackground.astro';
 import Header from '@components/Header.astro';
 import Hero from '@components/Hero.astro';
 import Lines from '@components/Lines.astro';
+import Schedule from '@components/Schedule.astro';
 import Footer from '@components/Footer.astro';
 ---
 
@@ -21,8 +22,15 @@ import Footer from '@components/Footer.astro';
 		<Lines/>
 	</GreenBackground>
 
-	<section>
-		<h2>Agenda</h2>
+	<section class="my-24">
+		<div class="container">
+			<hgroup class="mb-12 text-center">
+				<h2 class="py-3 text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-tournment-yellow-100 via-yellow-200 to-tournment-yellow-200">Agenda</h2>
+				<p class="mt-1 font-bold sm:text-lg">1° Torneo de las Fresas.</p>
+			</hgroup>
+			<Schedule/>
+			<p class="mt-5 opacity-80">Los horarios de la competición son aproximados, puesto que algunos partidos pueden tener un rango menor de duración al acordado, 20 minutos entre cada justa deportiva, con 5 minutos límite para el reconocimiento de cancha.</p>
+		</div>
 	</section>
 
 	<section>
