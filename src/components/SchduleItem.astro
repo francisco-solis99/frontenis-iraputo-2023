@@ -1,0 +1,13 @@
+---
+const { start, title, subtitle } = Astro.props;
+---
+
+<article class="grid md:grid-cols-2 gap-4 justify-items-center items-center text-center md:text-left">
+  <div>
+    <p class="font-bold text-3xl text-tournment-yellow-100">{start}</p>
+  </div>
+  <div class="md:justify-self-start">
+    <p class="font-bold text-3xl">{title}</p>
+    <p class="mt-1 font-medium text-tournment-red-100">{subtitle}</p>
+  </div>
+</article>
