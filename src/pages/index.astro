@@ -6,10 +6,12 @@ import Layout from '@layouts/Layout.astro';
 import GreenBackground from '@components/GreenBackground.astro';
 import Header from '@components/Header.astro';
 import Hero from '@components/Hero.astro';
+import FloatIcons from '@components/FloatIcons.astro';
 import Lines from '@components/Lines.astro';
 import Schedule from '@components/Schedule.astro';
+import SponsorsList from '@components/SponsorsList.astro';
 import Footer from '@components/Footer.astro';
-import FloatIcons from '@components/FloatIcons.astro';
+
 ---
 
 <Layout
@@ -27,7 +29,12 @@ import FloatIcons from '@components/FloatIcons.astro';
 	<section class="my-24">
 		<div class="container">
 			<hgroup class="mb-12 text-center">
-				<h2 class="py-3 text-4xl sm:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-tournment-yellow-100 via-yellow-200 to-tournment-yellow-200">Agenda</h2>
+				<h2 id="agenda" class="py-3 text-4xl sm:text-6xl font-black text-white">
+					<span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100">
+						Agenda
+					</span>
+				</h2>
+
 				<p class="mt-1 font-bold sm:text-lg">1° Torneo de las Fresas.</p>
 			</hgroup>
 			<Schedule/>
@@ -35,8 +42,31 @@ import FloatIcons from '@components/FloatIcons.astro';
 		</div>
 	</section>
 
-	<section>
-		<h2>Reglas</h2>
+	<section class="my-24">
+		<div class="container">
+			<h2 id='reglas' class='py-3 text-4xl font-black text-center text-white sm:text-6xl'>
+				<span class='text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100'>Reglas</span>
+			</h2>
+		</div>
+	</section>
+
+	<section class="my-24">
+		<div class="container">
+			<h2 id='patrocinadores' class='py-3 text-4xl font-black text-center text-white sm:text-6xl'>
+				<span class='text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100'>Patrocinadores</span>
+			</h2>
+			<div class="mt-10">
+				<SponsorsList/>
+			</div>
+		</div>
+	</section>
+
+	<section class="my-24">
+		<div class="container">
+			<h2 id='premios' class='py-3 text-4xl font-black text-center text-white sm:text-6xl'>
+				<span class='text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100'>Premios</span>
+			</h2>
+		</div>
 	</section>
 
 	<Footer />
