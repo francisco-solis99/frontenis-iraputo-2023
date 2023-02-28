@@ -23,13 +23,13 @@ const sponsors = [
 ];
 ---
 
-<ul class="grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-y-16 sm:gap-8">
+<ul class="grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-y-10 sm:gap-8">
   {
     sponsors.map(sponsor => {
       return (
         <li>
           <a href={sponsor.link} target="_blank" rel="noopener noreferrer" title={sponsor.name} class="inline-block w-40 h-auto transition hover:saturate-200 hover:scale-125">
-              <img src={`/images/logos/${sponsor.image}`} alt={sponsor.name} class="" loading='lazy'>
+              <img src={`/images/logos/${sponsor.image}`} alt={sponsor.name} class="mx-auto max-h-32" loading='lazy'>
           </a>
         </li>
       );
