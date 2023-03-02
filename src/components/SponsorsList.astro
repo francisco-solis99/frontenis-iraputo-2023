@@ -19,17 +19,45 @@ const sponsors = [
     name: 'Lulu Burger',
     link: 'https://www.facebook.com/Lulu-Burger-658755967979587/',
     image: 'lulu.webp'
+  },
+  {
+    name: 'Servicom',
+    link: '',
+    image: 'servicom.webp'
+  },
+  {
+    name: 'Tie Break',
+    link: 'https://www.facebook.com/tiebreakirapuato/',
+    image: 'tie-break.webp'
+  },
+  {
+    name: 'Helados Irapuato',
+    link: 'https://www.google.com/search?q=helados%20irapuato%20presidencia%20de%20la%20republica&rlz=1C1ONGR_esMX990MX990&sxsrf=AJOqlzX_yPv1CzjbcPDP-0fHMjfq7O6mWA:1677731473708&ei=dyYAZLKXIuHHkPIP3q6syAE&oq=helados+irapuato+presidencia+de+la+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgUIIRCgATIFCCEQoAEyBQghEKABMgUIIRCgAToICAAQogQQsAM6BAghEBU6BwghEKABEAo6CAghEBYQHhAdSgQIQRgBUOkJWN4YYJIfaAJwAHgAgAHYAYgB_RKSAQYwLjE3LjGYAQCgAQHIAQLAAQE&sclient=gws-wiz-serp&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9&tbm=lcl&rflfq=1&num=10&rldimm=10373312219898897229&lqi=CixoZWxhZG9zIGlyYXB1YXRvIHByZXNpZGVuY2lhIGRlIGxhIHJlcHVibGljYUiuq4yLz6uAgAhaRBAAEAIQAxAEEAUYABgBGAIYBSIsaGVsYWRvcyBpcmFwdWF0byBwcmVzaWRlbmNpYSBkZSBsYSByZXB1YmxpY2EyAmVzkgEOaWNlX2NyZWFtX3Nob3CaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJPVGR0UmpablJSQUKqATQQASowIixoZWxhZG9zIGlyYXB1YXRvIHByZXNpZGVuY2lhIGRlIGxhIHJlcHVibGljYSgO&ved=2ahUKEwjPiJPktLz9AhVkDkQIHcu4DxkQvS56BAgKEA4&sa=X&rlst=f#rlfi=hd:;si:10373312219898897229,l,CixoZWxhZG9zIGlyYXB1YXRvIHByZXNpZGVuY2lhIGRlIGxhIHJlcHVibGljYUiuq4yLz6uAgAhaRBAAEAIQAxAEEAUYABgBGAIYBSIsaGVsYWRvcyBpcmFwdWF0byBwcmVzaWRlbmNpYSBkZSBsYSByZXB1YmxpY2EyAmVzkgEOaWNlX2NyZWFtX3Nob3CaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVUTJPVGR0UmpablJSQUKqATQQASowIixoZWxhZG9zIGlyYXB1YXRvIHByZXNpZGVuY2lhIGRlIGxhIHJlcHVibGljYSgO;mv:[[20.6597589,-101.3413521],[20.6597416,-101.3445418]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9',
+    image: 'helados-irapuato.webp'
   }
 ];
 ---
 
-<ul class="grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-y-10 sm:gap-8">
+<ul
+  class="grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-y-10 sm:gap-8"
+>
   {
-    sponsors.map(sponsor => {
+    sponsors.map((sponsor) => {
       return (
         <li>
-          <a href={sponsor.link} target="_blank" rel="noopener noreferrer" title={sponsor.name} class="inline-block w-40 h-auto transition hover:saturate-200 hover:scale-125">
-              <img src={`/images/logos/${sponsor.image}`} alt={sponsor.name} class="mx-auto max-h-32" loading='lazy'>
+          <a
+            href={sponsor.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={sponsor.name}
+            class="inline-block w-40 h-auto transition hover:saturate-200 hover:scale-125"
+          >
+            <img
+              src={`/images/logos/${sponsor.image}`}
+              alt={sponsor.name}
+              class="mx-auto max-h-32"
+              loading="lazy"
+            />
           </a>
         </li>
       );
