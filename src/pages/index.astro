@@ -16,7 +16,6 @@ import FirstPlace from '@components/icons/FirstPlace.astro';
 import SecondPlace from '@components/icons/SecondPlace.astro';
 import ThirdPlace from '@components/icons/ThirdPlace.astro';
 import Footer from '@components/Footer.astro';
-
 ---
 
 <Layout
@@ -26,65 +25,111 @@ import Footer from '@components/Footer.astro';
 >
 	<GreenBackground>
 		<Header />
-		<Hero/>
-		<FloatIcons/>
-		<Lines/>
+		<Hero />
+		<FloatIcons />
+		<Lines />
 	</GreenBackground>
 
 	<SectionHome>
 		<hgroup class="mb-12 text-center">
 			<h2 id="agenda" class="py-3 text-4xl sm:text-6xl font-black text-white">
-				<span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100">
+				<span
+					class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100"
+				>
 					Agenda
 				</span>
 			</h2>
 			<p class="mt-1 font-bold sm:text-lg">1° Torneo de las Fresas.</p>
 		</hgroup>
-		<Schedule/>
-		<p class="mt-5 opacity-80">Los horarios de la competición son aproximados, puesto que algunos partidos pueden tener un rango menor de duración al acordado, 20 minutos entre cada justa deportiva, con 5 minutos límite para el reconocimiento de cancha.</p>
+		<Schedule />
+		<p class="mt-5 opacity-80">
+			Los horarios de la competición son aproximados, puesto que algunos
+			partidos pueden tener un rango menor de duración al acordado, 20 minutos
+			entre cada justa deportiva, con 5 minutos límite para el reconocimiento de
+			cancha.
+		</p>
 	</SectionHome>
 
 	<SectionHome>
-		<h2 id='reglas' class='py-3 text-4xl font-black text-center text-white sm:text-6xl'>
-			<span class='text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100'>Reglas</span>
+		<h2
+			id="reglas"
+			class="py-3 text-4xl font-black text-center text-white sm:text-6xl"
+		>
+			<span
+				class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100"
+				>Reglas</span
+			>
 		</h2>
+		<p class="text-lg underline underline-offset-4 decoration-wavy decoration-white font-bold">
+			El costo de la inscripción por persona es de <strong class="text-tournment-green-100">$200 MXN</strong>
+		</p>
+		<ul class="grid gap-3 mt-5 [&>li]:before:content-['👉_'] [&>li]:text-lg">
+			<li>El número de canchas destinadas para los partidos serán 2.</li>
+			<li>El número de parejas participantes sera de 32.</li>
+			<li>El número de grupos seran 8, donde en cada grupo habran 4 parejas.</li>
+			<li>Cada pareja jugará 3 partidos en la primera fase.</li>
+			<li>Los juegos son a doble eliminatoria, es decir, si la pareja ha perdido sus 2 primeros partidos quedará eliminada automáticamente.</li>
+			<li>
+				Avanzan a la siguiente fase las dos primeras parejas de cada grupo
+			.</li>
+			<li>Cada partido será a 10 puntos o 20 minutos de juego.</li>
+			<li>La pelota del torneo será HEAD o MasterPro Pre-Olímpico.</li>
+		</ul>
 	</SectionHome>
 
 	<SectionHome>
-		<h2 id='patrocinadores' class='py-3 text-4xl font-black text-center text-white sm:text-6xl'>
-			<span class='text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100'>Patrocinadores</span>
+		<h2
+			id="patrocinadores"
+			class="py-3 text-4xl font-black text-center text-white sm:text-6xl"
+		>
+			<span
+				class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100"
+				>Patrocinadores</span
+			>
 		</h2>
 		<div class="mt-10">
-			<SponsorsList/>
+			<SponsorsList />
 		</div>
 	</SectionHome>
 
 	<SectionHome>
-		<h2 id='premios' class='py-3 text-4xl font-black text-center text-white sm:text-6xl'>
-			<span class='text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100'>Premios</span>
+		<h2
+			id="premios"
+			class="py-3 text-4xl font-black text-center text-white sm:text-6xl"
+		>
+			<span
+				class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-300 to-yellow-100"
+				>Premios</span
+			>
 		</h2>
-		<div class="mt-4 lg:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-y-8">
-			<div class="flex flex-col items-center justify-center ">
-				<Money/>
+		<div
+			class="mt-4 lg:mt-10 grid sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-center gap-y-8"
+		>
+			<div class="flex flex-col items-center justify-center">
+				<Money />
 				<p class="text-center">
 					<span class="block text-xl">Premio a repartir</span>
 					<span class="text-3xl font-bold">$15,000 MXN</span>
 				</p>
 			</div>
 			<picture class="hidden lg:inline-block max-w-xs min-w-[250px]">
-				<img src="images/player.webp" alt="Jugador del torneo" class="w-full object-cover">
+				<img
+					src="images/player.webp"
+					alt="Jugador del torneo"
+					class="w-full object-cover"
+				/>
 			</picture>
 			<ul role="listitem" class="grid gap-y-6 [&>li]:flex [&>li]:items-center">
 				<li>
-					<FirstPlace/>
+					<FirstPlace />
 					<span class="ml-3 text-xl font-bold">$7,000 MXN</span>
 				</li>
 				<li>
-					<SecondPlace/>
+					<SecondPlace />
 					<span class="ml-3 text-xl font-bold">$5,000 MXN</span>
 				</li>
 				<li>
-					<ThirdPlace/>
+					<ThirdPlace />
 					<span class="ml-3 text-xl font-bold">$3,000 MXN</span>
 				</li>
 			</ul>
