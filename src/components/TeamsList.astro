@@ -1,0 +1,51 @@
+---
+// Services
+import { getTeams } from '@services/teams.js';
+// Components
+import Team from '@components/Team.astro';
+const { rows: teams } = await getTeams();
+---
+
+<ul class="grid gap-y-4">
+  {
+    teams.map(team => {
+      return (
+        <Team players={team.players} teamId={team.id}/>
+      );
+    })
+  }
+</ul>
+
+<script >
+import { updateTeamGroupId } from '../services/teams.js';
+import { isAvailableGroup, getGroups } from '../services/groups.js';
+
+const btnsSetGroup = document.querySelectorAll('.set-random-group');
+
+function getRandomGroup(groups) {
+  const max = 11;
+  const min = 0;
+  const randomGroup = groups[Math.floor(Math.random() * (max - min + 1) + min)];
+  return randomGroup;
+}
+
+async function setRandomGroupName(idTeam, pElement) {
+  const { rows: allGroups } = await getGroups();
+  let groupRandom = getRandomGroup(allGroups);
+  while (await isAvailableGroup(groupRandom.id) === false) {
+    groupRandom = getRandomGroup(allGroups);
+  }
+  console.log(groupRandom)
+  await updateTeamGroupId(idTeam, groupRandom.id);
+  console.log(groupRandom)
+  pElement.textContent = groupRandom.name;
+}
+
+btnsSetGroup.forEach(btn => btn.addEventListener('click', () => {
+  console.log('click');
+  const idTeam = btn.dataset.teamId;
+  const pGroupName = btn.parentElement.nextElementSibling.querySelector('p');
+  setRandomGroupName(idTeam, pGroupName);
+}));
+
+</script>

@@ -1,0 +1,31 @@
+---
+const { players, teamId } = Astro.props;
+---
+
+<li class="flex gap-x-10">
+  <div class="w-full p-4 flex justify-between border border-white hover:scale-105 transition-transform ease-in-out">
+    <article class="">
+      {
+        players.map(player => {
+          return (
+            <div>
+              <p class="inline-flex">
+                <span>{player.name} - {player.city}</span>
+              </p>
+            </div>
+          );
+        })
+      }
+    </article>
+
+    <button data-team-id={teamId} class="set-random-group px-3 py-2 bg-tournment-yellow-300 text-tournment-dark-100 rounded-md">
+      Asignar grupo
+    </button>
+  </div>
+
+  <!-- Random group -->
+  <div class="grid place-content-center w-1/5 bg-tournment-green-100 rounded-md">
+    <h3 class="text-lg">Grupo</h3>
+    <p class="text-xl font-bold text-center" id="group-name"></p>
+  </div>
+</li>
