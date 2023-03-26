@@ -1,0 +1,28 @@
+---
+const { name, teams } = Astro.props;
+---
+
+<article class="p-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-tournment-dark-100 shadow-md shadow-slate-700 hover:scale-105 transition-transform ease-out rounded-md">
+  <div class="p-4 bg-gray-800 text-white">
+    <h2 class="mb-3 text-bold text-3xl text-center">{name}</h2>
+    {
+      teams.map(({ players }) => {
+        return (
+          <ul class="grid gap-2 list-disc">
+            <li class="flex">
+              {
+                players.map((player, index) => {
+                  return (
+                    index === 0
+                      ? <p>{player.name} - </p>
+                      : <p class="ml-1">{player.name}</p>
+                  );
+                })
+              }
+            </li>
+          </ul>
+        );
+      })
+    }
+  </div>
+</article>

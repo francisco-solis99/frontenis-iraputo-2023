@@ -14,6 +14,13 @@ export const getGroups = async() => {
   return groups;
 };
 
+export const getGroupById = async(id) => {
+  const groupUrl = `${API.base}${API.groups}/${id}`;
+  const response = await fetch(groupUrl);
+  const group = await response.json();
+  return group;
+};
+
 export async function isAvailableGroup(idRandomGroup) {
   const { data: group } = await getGroupAllInfo(idRandomGroup);
   const { teams } = group;

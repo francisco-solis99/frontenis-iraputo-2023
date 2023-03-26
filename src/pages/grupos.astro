@@ -5,6 +5,17 @@ import Layout from '@layouts/Layout.astro';
 // Components
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import GroupsList from '@components/GroupsList.astro';
+
+import { getGroupAllInfo } from '@services/groups';
+
+const groupsIds = Array.from(Array(10).keys());
+
+const groupsInfo = await Promise.all(groupsIds.map(async(id) => {
+  const { data: group } = await getGroupAllInfo(id + 1);
+  return group;
+}));
+
 ---
 
 <Layout
@@ -13,5 +24,15 @@ import Footer from '@components/Footer.astro';
 	dark={true}
 >
   <Header />
+
+	<section class="my-16">
+		<div class="container">
+			<h1 class="text-6xl text-tournment-yellow-200 text-center">Grupos</h1>
+			<div class="mt-10">
+				<GroupsList groups={groupsInfo}/>
+			</div>
+		</div>
+	</section>
+
 	<Footer />
 </Layout>
